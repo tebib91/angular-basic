@@ -11,4 +11,10 @@ import { RouterOutlet } from '@angular/router';
 })
 export class AppComponent {
   title = 'angular-basic';
+  backgroundImageUrl: string;
+
+  constructor() {
+    // Set the background image URL dynamically
+    this.backgroundImageUrl = `/assets/backgrounds/background-${3}.webp`;
+  }
 }
