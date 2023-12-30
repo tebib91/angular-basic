@@ -1,15 +1,15 @@
 # Build Stage
-FROM node:18-bullseye-slim AS build-stage
+FROM node:20-alpine AS build-stage
 
 WORKDIR /app
 
 # Copy package.json and package-lock.json
-COPY package*.json ./
+COPY package*.json .
 
 RUN echo "Checking architecture: $(arch)"
 
 # Install dependencies
-RUN npm install --verbose
+RUN npm install
 
 # Copy the rest of the application
 COPY . .
@@ -18,7 +18,7 @@ COPY . .
 RUN npm run build
 
 # Serve Stage
-FROM node:18-bullseye-slim
+FROM node:20-alpine
 
 WORKDIR /app
 
