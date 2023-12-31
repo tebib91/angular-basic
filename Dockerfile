@@ -25,8 +25,8 @@ WORKDIR /app
 # Copy built app from the build stage
 COPY --from=build-stage /app/dist ./dist
 
-# Expose port 4000
-EXPOSE 4000
+# Expose port 1991
+EXPOSE 1991
 
 # Start the Angular Universal server
 CMD ["node", "dist/angular-basic/server/server.mjs"]
