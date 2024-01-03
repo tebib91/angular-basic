@@ -1,0 +1,34 @@
+@import "variables";
+
+:host {
+  display: block;
+}
+
+
+.portfolio {
+  background-color: #fff;
+  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.1);
+  position: relative;
+  max-width: 80vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: auto; // Ensure the container takes up the full height of the parent
+
+  margin: auto;
+  border-radius: $border-radius;
+ @media (min-width: 48rem) { // Converted from 768px
+    width: 45rem; // Converted from 720px
+    height: 25rem; // Converted from 400px
+  }
+
+  @media (min-width: 64rem) { // Converted from 1024px
+    width: 60rem; // Converted from 960px
+    height: 31.25rem; // Converted from 500px
+  }
+
+  section.content {
+    padding: 2rem;
+  }
+}
